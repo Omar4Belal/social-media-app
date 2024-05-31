@@ -54,9 +54,7 @@ const ProfileView = () => {
     setEditing(!editing);
   };
 
-  const handleMessage = () => {
-    navigate("/messenger", { state: { user: profile.user } });
-  };
+
 
   useEffect(() => {
     fetchUser();
@@ -105,7 +103,6 @@ const ProfileView = () => {
               editing={editing}
               handleSubmit={handleSubmit}
               handleEditing={handleEditing}
-              handleMessage={handleMessage}
               validate={validate}
             />
             <Stack spacing={2}>
@@ -129,7 +126,6 @@ const ProfileView = () => {
               editing={editing}
               handleSubmit={handleSubmit}
               handleEditing={handleEditing}
-              handleMessage={handleMessage}
               validate={validate}
             />
 
