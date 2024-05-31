@@ -226,6 +226,11 @@ const Messages = (props) => {
       alignItems="center"
       spacing={2}
     >
+      <AiFillMessage size={80} />
+      <Typography variant="h5">Enthusiastecs Messenger</Typography>
+      <Typography color="text.secondary">
+        Privately message other users on Enthusiastecs
+      </Typography>
     </Stack>
   );
 };

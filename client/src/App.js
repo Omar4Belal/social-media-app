@@ -24,6 +24,7 @@ import SignupView from "./components/views/SignupView";
 import ExploreView from "./components/views/ExploreView";
 import PrivateRoute from "./components/PrivateRoute";
 import SearchView from "./components/views/SearchView";
+import MessengerView from "./components/views/MessengerView";
 import { initiateSocketConnection, socket } from "./helpers/socketHelper";
 import { useEffect } from "react";
 import { BASE_URL } from "./config";
@@ -48,6 +49,12 @@ function App() {
             }
           />
           <Route
+            path="/messenger"
+            element={
+              <PrivateRoute>
+                <MessengerView />
+              </PrivateRoute>
+            }
           />
           <Route path="/search" element={<SearchView />} />
           <Route path="/users/:id" element={<ProfileView />} />
