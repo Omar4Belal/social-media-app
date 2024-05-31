@@ -69,6 +69,11 @@ const Profile = (props) => {
             </Box>
           )}
 
+          {currentUser && user._id !== currentUser.userId && (
+            <Button variant="outlined" onClick={props.handleMessage}>
+              Message
+            </Button>
+          )}
 
           <HorizontalStack>
             <Typography color="text.secondary">
